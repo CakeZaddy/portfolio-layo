@@ -7,13 +7,24 @@ import Testimonials from './components/Testimonials'
 import Quote from './components/Quote'
 import Blogs from './components/Blogs'
 import Footer from './components/Footer'
+import { MdLightMode, MdDarkMode } from 'react-icons/md'
 // import BlogSlider from './components/BlogSlider'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [darkMode, setDarkMode] = useState(false)
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode)
+  }
 
   return (
-    <>
+    <div className={darkMode ? 'dark' : ''}>
+      <div
+        onClick={toggleDarkMode}
+        className='fixed z-[102] top-2 left-2 ease-in-out duration-500'
+      >
+        {darkMode ? <MdLightMode size={30} /> : <MdDarkMode size={30} />}
+      </div>
       <Navbar />
       <Hero />
       <About />
@@ -23,7 +34,7 @@ function App() {
       <Blogs />
       <Footer />
       {/* <BlogSlider /> */}
-    </>
+    </div>
   )
 }
 

@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (prefers-color-scheme: dark) {
+  @import 'tailwindcss/dark';
+}
+
+.dark {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+.dark .bg-gray-300 {
+  background-color: #141a21;
+}
+.dark .text-gray-500 {
+  color: aliceblue;
+}
+.dark .con:hover {
+  color: rgb(55, 54, 54);
+}
+.dark .bg-gray-400 {
+  background-color: #141a21;
+}
+.dark .bg-slate-300 {
+  background-color: #1f2937;
+}
+.dark .bg-slate-400 {
+  background-color: #141a21;
+}
+.dark .green {
+  background-color: #1f3535;
+}
+
 body {
   background-color: rgb(223, 220, 220);
 }

@@ -17,11 +17,11 @@ const Navbar = () => {
       </h1>
       <div className='lg:flex justify-center items-center gap-8 hidden'>
         <ul className='flex justify-center gap-3 xl:gap-5 items-center hover:text-gray-500 font-medium text-lg'>
-          <li className=' cursor-pointer hover:text-black'>Home</li>
-          <li className=' cursor-pointer hover:text-black'>About</li>
-          <li className=' cursor-pointer hover:text-black'>Services</li>
-          <li className=' cursor-pointer hover:text-black'>Blog</li>
-          <li className=' cursor-pointer hover:text-black'>Contact</li>
+          <li className=' cursor-pointer con hover:text-black'>Home</li>
+          <li className=' cursor-pointer con hover:text-black'>About</li>
+          <li className=' cursor-pointer con hover:text-black'>Services</li>
+          <li className=' cursor-pointer con hover:text-black'>Blog</li>
+          <li className=' cursor-pointer con hover:text-black'>Contact</li>
         </ul>
         <div className='flex gap-3 justify-center mb-2'>
           <FaLinkedinIn className='h-6 w-6 hover:scale-125 ease-in-out duration-300 cursor-pointer' />
@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className='fixed right-4 lg:hidden p-1 cursor-pointer'
+        className='fixed right-2 top-1 lg:hidden p-1 z-[51] cursor-pointer'
         onClick={handleNav}
       >
         {nav ? (
@@ -47,19 +47,19 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? 'fixed lg:hidden left-0 top-0 w-[85%] h-full bg-gray-300 ease-in-out duration-700 border-r border-black z-50'
+            ? 'fixed lg:hidden left-0 top-0 w-full h-full bg-gray-300 ease-in-out duration-700 border-r border-black z-50'
             : 'fixed left-[-100%] lg:hidden top-0 w-[85%] h-full bg-gray-300 ease-in-out duration-700 border-r border-black z-50'
         }
       >
-        <h1 className='text-center mt-10 text-2xl font-chivo font-semibold'>
+        <h1 className='text-center mt-10 text-3xl md:text-4xl font-chivo font-semibold'>
           Ebunoluwa Oguntimehin
         </h1>
         <ul className='text-center text-gray-500 font-semibold text-5xl pt-10'>
-          <li className='p-4 hover:text-black cursor-pointer'>Home</li>
-          <li className='p-4 hover:text-black cursor-pointer'>About</li>
-          <li className='p-4 hover:text-black cursor-pointer'>Services</li>
-          <li className='p-4 hover:text-black cursor-pointer'>Blog</li>
-          <li className='p-4 hover:text-black cursor-pointer'>Contact</li>
+          <li className='p-4 hover:text-black con cursor-pointer'>Home</li>
+          <li className='p-4 hover:text-black con cursor-pointer'>About</li>
+          <li className='p-4 hover:text-black con cursor-pointer'>Services</li>
+          <li className='p-4 hover:text-black con cursor-pointer'>Blog</li>
+          <li className='p-4 hover:text-black con cursor-pointer'>Contact</li>
         </ul>
         <div className='flex gap-5 justify-center mt-10'>
           <FaLinkedinIn className='h-8 w-8 hover:scale-125 ease-in-out duration-300 cursor-pointer' />

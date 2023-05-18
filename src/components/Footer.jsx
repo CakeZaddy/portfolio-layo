@@ -4,7 +4,7 @@ import { FaLinkedinIn } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <div className='bg-[#3b7777] p-7 text-center grid md:grid-cols-3 xl:px-20 '>
+    <div className='bg-[#3b7777] green p-7 text-center grid md:grid-cols-3 xl:px-20 '>
       <div className=''>
         <h2 className='text-xl mb-5 font-medium'>Subscribe To My Newsletter</h2>
         <p className='text-lg'>
