@@ -5,7 +5,7 @@ const Testimonials = () => {
   return (
     <div className=''>
       <div className='py-10 px-5'>
-        <h2 className='text-3xl text-center md:font-medium md:text-4xl'>
+        <h2 className='text-3xl font-eczar text-center md:font-medium md:text-4xl'>
           Client Testimonials
         </h2>
       </div>
@@ -13,7 +13,7 @@ const Testimonials = () => {
         <Slider />
       </div>
       <div className='flex justify-center items-center'>
-        <button className='h-[50px] w-[220px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8'>
+        <button className='h-[50px] w-[220px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
           Full Testimonials
         </button>
       </div>

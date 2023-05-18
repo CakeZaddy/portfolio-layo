@@ -10,7 +10,7 @@ import { Pagination, Navigation } from 'swiper'
 
 const Slider = () => {
   return (
-    <div>
+    <div className='font-neuton font-semibold'>
       <Swiper
         // centeredSlides={true}
         pagination={{
@@ -50,7 +50,7 @@ const Slider = () => {
                 voluptas, exercitationem modi earum est quae sint vero.
               </p>
             </div>
-            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8'>
+            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
               Read Blog
             </button>
           </div>
@@ -68,7 +68,7 @@ const Slider = () => {
                 voluptas, exercitationem modi earum est quae sint vero.
               </p>
             </div>
-            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8'>
+            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
               Read Blog
             </button>
           </div>
@@ -86,7 +86,7 @@ const Slider = () => {
                 voluptas, exercitationem modi earum est quae sint vero.
               </p>
             </div>
-            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8'>
+            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
               Read Blog
             </button>
           </div>
@@ -104,7 +104,7 @@ const Slider = () => {
                 voluptas, exercitationem modi earum est quae sint vero.
               </p>
             </div>
-            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8'>
+            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
               Read Blog
             </button>
           </div>
@@ -122,7 +122,7 @@ const Slider = () => {
                 voluptas, exercitationem modi earum est quae sint vero.
               </p>
             </div>
-            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8'>
+            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
               Read Blog
             </button>
           </div>
@@ -140,7 +140,7 @@ const Slider = () => {
                 voluptas, exercitationem modi earum est quae sint vero.
               </p>
             </div>
-            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8'>
+            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
               Read Blog
             </button>
           </div>

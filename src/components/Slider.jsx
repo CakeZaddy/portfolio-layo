@@ -10,7 +10,7 @@ import { Pagination, Navigation } from 'swiper'
 
 const Slider = () => {
   return (
-    <div>
+    <div className='font-neuton'>
       <Swiper
         // centeredSlides={true}
         pagination={{

@@ -4,7 +4,7 @@ import React from 'react'
 const Hero = () => {
   return (
     <>
-      <div className='h-[400px] relative z-[-10] flex justify-center items-center bg-local'>
+      <div className='h-[400px] relative z-[-10] font-eczar flex justify-center items-center bg-local'>
         <img
           className='w-[100%] pt-10 lg:pt-0 xl:mt-[-100px] contrast-75 '
           src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684188147/layo/timo-volz-4L_vLcqG3ds-unsplash_e5j8yb.jpg'

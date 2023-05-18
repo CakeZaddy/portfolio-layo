@@ -11,8 +11,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className='fixed flex justify-between w-full items-center h-24 mx-auto z-[100] bg-gray-300 lg:px-[50px] xl:px-[100px] border-black border-b'>
-      <h1 className='w-full text-3xl font-semibold font-candara text-center lg:text-left'>
+    <div className='fixed flex font-eczar justify-between w-full items-center h-24 mx-auto z-[100] bg-gray-300 lg:px-[50px] xl:px-[100px] border-black border-b'>
+      <h1 className='w-full text-3xl md:text-4xl font-semibold font-chivo text-center lg:text-left'>
         Ebunoluwa Oguntimehin
       </h1>
       <div className='lg:flex justify-center items-center gap-8 hidden'>
@@ -51,7 +51,7 @@ const Navbar = () => {
             : 'fixed left-[-100%] lg:hidden top-0 w-[85%] h-full bg-gray-300 ease-in-out duration-700 border-r border-black z-50'
         }
       >
-        <h1 className='text-center mt-10 text-2xl font-semibold'>
+        <h1 className='text-center mt-10 text-2xl font-chivo font-semibold'>
           Ebunoluwa Oguntimehin
         </h1>
         <ul className='text-center text-gray-500 font-semibold text-5xl pt-10'>
