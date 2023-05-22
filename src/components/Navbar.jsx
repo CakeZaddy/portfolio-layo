@@ -2,12 +2,20 @@ import React, { useState } from 'react'
 import { BsInstagram, BsTwitter } from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
+  const location = useLocation()
 
   const handleNav = () => {
     setNav(!nav)
+  }
+
+  function pathMatch(route) {
+    if (route === location.pathname) {
+      return true
+    }
   }
 
   return (
@@ -17,11 +25,51 @@ const Navbar = () => {
       </h1>
       <div className='lg:flex justify-center items-center gap-8 hidden'>
         <ul className='flex justify-center gap-3 xl:gap-5 items-center hover:text-gray-500 font-medium text-lg'>
-          <li className=' cursor-pointer con hover:text-black'>Home</li>
-          <li className=' cursor-pointer con hover:text-black'>About</li>
-          <li className=' cursor-pointer con hover:text-black'>Services</li>
-          <li className=' cursor-pointer con hover:text-black'>Blog</li>
-          <li className=' cursor-pointer con hover:text-black'>Contact</li>
+          <NavLink to='/'>
+            <li
+              className={` cursor-pointer con hover:text-black ${
+                pathMatch('/') && 'border-b-2 border-b-red-500'
+              }`}
+            >
+              Home
+            </li>
+          </NavLink>
+          <Link to='/about'>
+            <li
+              className={` cursor-pointer con hover:text-black ${
+                pathMatch('/about') && 'border-b-2 border-b-red-500'
+              }`}
+            >
+              About
+            </li>
+          </Link>
+          <Link to='/services'>
+            <li
+              className={` cursor-pointer con hover:text-black ${
+                pathMatch('/services') && 'border-b-2 border-b-red-500'
+              }`}
+            >
+              Services
+            </li>
+          </Link>
+          <Link to='/blog'>
+            <li
+              className={` cursor-pointer con hover:text-black ${
+                pathMatch('/blog') && 'border-b-2 border-b-red-500'
+              }`}
+            >
+              Blog
+            </li>
+          </Link>
+          <Link to='/contact'>
+            <li
+              className={` cursor-pointer con hover:text-black ${
+                pathMatch('/contact') && 'border-b-2 border-b-red-500'
+              }`}
+            >
+              Contact
+            </li>
+          </Link>
         </ul>
         <div className='flex gap-3 justify-center mb-2'>
           <FaLinkedinIn className='h-6 w-6 hover:scale-125 ease-in-out duration-300 cursor-pointer' />
@@ -54,12 +102,52 @@ const Navbar = () => {
         <h1 className='text-center mt-10 text-3xl md:text-4xl font-chivo font-semibold'>
           Ebunoluwa Oguntimehin
         </h1>
-        <ul className='text-center text-gray-500 font-semibold text-5xl pt-10'>
-          <li className='p-4 hover:text-black con cursor-pointer'>Home</li>
-          <li className='p-4 hover:text-black con cursor-pointer'>About</li>
-          <li className='p-4 hover:text-black con cursor-pointer'>Services</li>
-          <li className='p-4 hover:text-black con cursor-pointer'>Blog</li>
-          <li className='p-4 hover:text-black con cursor-pointer'>Contact</li>
+        <ul className='text-center px-[120px] text-gray-500 font-semibold text-5xl pt-10'>
+          <Link to='/'>
+            <li
+              className={`p-4 hover:text-black con cursor-pointer ${
+                pathMatch('/') && 'text-black border-b-4 border-red-500'
+              }`}
+            >
+              Home
+            </li>
+          </Link>
+          <Link to='/about'>
+            <li
+              className={`p-4 hover:text-black con cursor-pointer ${
+                pathMatch('/about') && 'text-black border-b-4 border-red-500'
+              }`}
+            >
+              About
+            </li>
+          </Link>
+          <Link to='/services'>
+            <li
+              className={`p-4 hover:text-black con cursor-pointer ${
+                pathMatch('/services') && 'text-black border-b-4 border-red-500'
+              }`}
+            >
+              Services
+            </li>
+          </Link>
+          <Link to='/blog'>
+            <li
+              className={`p-4 hover:text-black con cursor-pointer ${
+                pathMatch('/blog') && 'text-black border-b-4 border-red-500'
+              }`}
+            >
+              Blog
+            </li>
+          </Link>
+          <Link to='/contact'>
+            <li
+              className={`p-4 hover:text-black con cursor-pointer ${
+                pathMatch('/contact') && 'text-black border-b-4 border-red-500'
+              }`}
+            >
+              Contact
+            </li>
+          </Link>
         </ul>
         <div className='flex gap-5 justify-center mt-10'>
           <FaLinkedinIn className='h-8 w-8 hover:scale-125 ease-in-out duration-300 cursor-pointer' />

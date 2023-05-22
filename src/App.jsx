@@ -1,14 +1,16 @@
 import { useState } from 'react'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import Testimonials from './components/Testimonials'
-import Quote from './components/Quote'
-import Blogs from './components/Blogs'
 import Footer from './components/Footer'
+import NotFound from './components/NotFound'
+import Home from './pages/Home'
+import About from './pages/About'
+import Services from './pages/Services'
+import Blog from './pages/Blog'
+import Contact from './pages/Contact'
+
 import { MdLightMode, MdDarkMode } from 'react-icons/md'
-// import BlogSlider from './components/BlogSlider'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -25,15 +27,18 @@ function App() {
       >
         {darkMode ? <MdLightMode size={30} /> : <MdDarkMode size={30} />}
       </div>
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Testimonials />
-      <Quote />
-      <Blogs />
-      <Footer />
-      {/* <BlogSlider /> */}
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/Contact' element={<Contact />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   )
 }

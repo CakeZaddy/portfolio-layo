@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -22,9 +23,11 @@ const About = () => {
             nulla libero eos in exercitationem optio atque a.
           </p>
         </div>
-        <button className='h-[50px] w-[230px] bg-orange-400 hover:bg-orange-500 font-semibold text-lg cursor-pointer font-eczar rounded-full'>
-          Know More About Me
-        </button>
+        <NavLink to='/about'>
+          <button className='h-[50px] w-[230px] bg-orange-400 hover:bg-orange-500 font-semibold text-lg cursor-pointer font-eczar rounded-full'>
+            Know More About Me
+          </button>
+        </NavLink>
       </div>
       <div className='mt-8'>
         <img
