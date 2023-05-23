@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
   return (
@@ -25,9 +26,11 @@ const Services = () => {
                 Brainstorm session
               </p>
             </div>
-            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8 font-eczar'>
-              Discover More
-            </button>
+            <Link to='/services'>
+              <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8 font-eczar'>
+                Discover More
+              </button>
+            </Link>
           </div>
           <div className='w-full shadow-xl flex flex-col justify-center items-center rounded-lg hover:scale-105 duration-300 bg-slate-300'>
             <img
@@ -46,9 +49,11 @@ const Services = () => {
                 more.
               </p>
             </div>
-            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
-              Discover More
-            </button>
+            <Link to='/services'>
+              <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
+                Discover More
+              </button>
+            </Link>
           </div>
           <div className='w-full shadow-xl flex flex-col justify-center items-center rounded-lg hover:scale-105 duration-300 bg-slate-300'>
             <img
@@ -67,9 +72,11 @@ const Services = () => {
                 for your business
               </p>
             </div>
-            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
-              Discover More
-            </button>
+            <Link to='/services'>
+              <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
+                Discover More
+              </button>
+            </Link>
           </div>
           <div className='w-full shadow-xl flex flex-col justify-center items-center rounded-lg hover:scale-105 duration-300 bg-slate-300'>
             <img
@@ -89,9 +96,11 @@ const Services = () => {
                 benefit your business
               </p>
             </div>
-            <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
-              Discover More
-            </button>
+            <Link to='/services'>
+              <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
+                Discover More
+              </button>
+            </Link>
           </div>
         </div>
       </div>

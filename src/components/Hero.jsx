@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 // import { heroImage } from '../assets/heroImage.jpg'
 
 const Hero = () => {
@@ -15,9 +16,11 @@ const Hero = () => {
           <h1 className='text-2xl font-semibold md:text-5xl md:text-semibold lg:font-bold text-center md:p-5 text-white mt-20 md:mt-[150px] lg:mt-[250px] xl:mt-[350px]'>
             Your Brand Looking For Support With Your Social Media Strategy?
           </h1>
-          <button className='cursor-pointer w-[200px] md:w-[350px] h-[50px] md:h-[70px] bg-orange-400 text-center text-lg md:text-2xl rounded-lg font-medium'>
-            View My Services
-          </button>
+          <Link to='/services'>
+            <button className='cursor-pointer w-[200px] md:w-[350px] h-[50px] md:h-[70px] bg-orange-400 hover:bg-orange-500 text-center text-lg md:text-2xl rounded-lg font-medium'>
+              View My Services
+            </button>
+          </Link>
         </div>
       </div>
     </>

@@ -1,14 +1,14 @@
 import React from 'react'
 
-import laptop from '../assets/laptoppm.jpg'
 import work from '../assets/workwith.jpg'
 import Testimonials from '../components/Testimonials'
 import Services from '../components/Services'
 
 const About = () => {
   return (
-    <div className='pt-24 pb-5'>
-      <div className='bg-[#3b7777] text-white text-center text-4xl font-semibold font-eczar px-5 py-10'>
+    <div className='pb-5'>
+      <div className='bg-[#3b7777] green h-24'></div>
+      <div className='bg-[#3b7777] green text-white text-center text-4xl font-semibold font-eczar px-5 py-10'>
         <h2>About Ebunoluwa Oguntimehin</h2>
       </div>
       <div className='py-7 px-10 md:py-[80px] md:px-[150px]'>
@@ -18,7 +18,7 @@ const About = () => {
           media more effectively and productively, saving time, money and stress
         </p>
       </div>
-      <div className='bg-gray-400 px-10 py-10 md:grid grid-cols-2 gap-8'>
+      <div className='bg-gray-400 px-10 py-10 lg:px-[100px] lg:py-[60px] lg:grid grid-cols-2 gap-8'>
         <div className=''>
           <h2 className='text-left text-3xl font-neuton pb-10'>
             How I Started Social Media Marketing?
@@ -51,12 +51,16 @@ const About = () => {
           </div>
         </div>
         <div className='pt-5'>
-          <img className='w-full h-full' src={laptop} alt='' />
+          <img
+            className='w-full'
+            src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684767192/layo/82DC857D-4866-4AA8-8E0C-AB5B6464350A_hvguv2.jpg'
+            alt=''
+          />
         </div>
       </div>
-      <div className='px-10 py-10 md:grid  grid-cols-2 gap-8'>
+      <div className='px-10 py-10 lg:px-[100px] lg:py-[60px] lg:grid  grid-cols-2 gap-8'>
         <div className='pt-5'>
-          <img className='w-full h-full' src={work} alt='' />
+          <img className='w-full' src={work} alt='' />
         </div>
         <div className=''>
           <h2 className='text-left text-3xl font-neuton pb-10'>

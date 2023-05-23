@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsInstagram, BsTwitter } from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -23,11 +24,19 @@ const Footer = () => {
           <BsTwitter className='h-5 w-5 hover:scale-125 ease-in-out duration-300 cursor-pointer' />
           <BsInstagram className='h-5 w-5 hover:scale-125 ease-in-out duration-300 cursor-pointer' />
         </div>
-        <ul className='text-lg text-yellow-800'>
-          <li>About</li>
-          <li>Services</li>
-          <li>Blog</li>
-          <li>Contact</li>
+        <ul className=' text-lg text-yellow-500 hover:text-yellow-600'>
+          <Link to='/about'>
+            <li className='hover:text-red-500'>About</li>
+          </Link>
+          <Link to='/services'>
+            <li className='hover:text-red-500'>Services</li>
+          </Link>
+          <Link to='/blog'>
+            <li className='hover:text-red-500'>Blog</li>
+          </Link>
+          <Link to='/contact'>
+            <li className='hover:text-red-500'>Contact</li>
+          </Link>
         </ul>
       </div>
       <hr className='mb-5 md:hidden' />
@@ -38,7 +47,7 @@ const Footer = () => {
           social media posting plan for February.
         </p>
         <button className='h-[50px] w-[200px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8'>
-          Post Ideas
+          Free Post Ideas
         </button>
       </div>
     </div>

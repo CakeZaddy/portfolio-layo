@@ -20,9 +20,11 @@ const Navbar = () => {
 
   return (
     <div className='fixed flex font-eczar justify-between w-full items-center h-24 mx-auto z-[100] bg-gray-300 lg:px-[50px] xl:px-[100px] border-black border-b'>
-      <h1 className='w-full text-3xl md:text-4xl font-semibold font-chivo text-center lg:text-left'>
-        Ebunoluwa Oguntimehin
-      </h1>
+      <Link to='/'>
+        <h1 className='w-full text-3xl md:text-4xl font-semibold font-chivo text-center lg:text-left'>
+          Ebunoluwa Oguntimehin
+        </h1>
+      </Link>
       <div className='lg:flex justify-center items-center gap-8 hidden'>
         <ul className='flex justify-center gap-3 xl:gap-5 items-center hover:text-gray-500 font-medium text-lg'>
           <NavLink to='/'>
@@ -77,7 +79,7 @@ const Navbar = () => {
           <BsInstagram className='h-6 w-6 hover:scale-125 ease-in-out duration-300 cursor-pointer' />
         </div>
         <div className='flex justify-center items-center'>
-          <button className='h-[40px] w-[150px] bg-orange-400 font-medium text-lg cursor-pointer rounded-full'>
+          <button className='h-[40px] w-[150px] bg-orange-400 font-medium text-lg cursor-pointer rounded-full hover:bg-orange-500'>
             Free Tips
           </button>
         </div>
@@ -103,46 +105,48 @@ const Navbar = () => {
           Ebunoluwa Oguntimehin
         </h1>
         <ul className='text-center px-[120px] text-gray-500 font-semibold text-5xl pt-10'>
-          <Link to='/'>
+          <Link onClick={handleNav} to='/'>
             <li
               className={`p-4 hover:text-black con cursor-pointer ${
-                pathMatch('/') && 'text-black border-b-4 border-red-500'
+                pathMatch('/') && 'text-gray-400 border-b-4 border-red-500'
               }`}
             >
               Home
             </li>
           </Link>
-          <Link to='/about'>
+          <Link onClick={handleNav} to='/about'>
             <li
               className={`p-4 hover:text-black con cursor-pointer ${
-                pathMatch('/about') && 'text-black border-b-4 border-red-500'
+                pathMatch('/about') && 'text-gray-400 border-b-4 border-red-500'
               }`}
             >
               About
             </li>
           </Link>
-          <Link to='/services'>
+          <Link onClick={handleNav} to='/services'>
             <li
               className={`p-4 hover:text-black con cursor-pointer ${
-                pathMatch('/services') && 'text-black border-b-4 border-red-500'
+                pathMatch('/services') &&
+                'text-gray-400 border-b-4 border-red-500'
               }`}
             >
               Services
             </li>
           </Link>
-          <Link to='/blog'>
+          <Link onClick={handleNav} to='/blog'>
             <li
               className={`p-4 hover:text-black con cursor-pointer ${
-                pathMatch('/blog') && 'text-black border-b-4 border-red-500'
+                pathMatch('/blog') && 'text-gray-400 border-b-4 border-red-500'
               }`}
             >
               Blog
             </li>
           </Link>
-          <Link to='/contact'>
+          <Link onClick={handleNav} to='/contact'>
             <li
               className={`p-4 hover:text-black con cursor-pointer ${
-                pathMatch('/contact') && 'text-black border-b-4 border-red-500'
+                pathMatch('/contact') &&
+                'text-gray-400 border-b-4 border-red-500'
               }`}
             >
               Contact
@@ -155,7 +159,7 @@ const Navbar = () => {
           <BsInstagram className='h-8 w-8 hover:scale-125 ease-in-out duration-300 cursor-pointer' />
         </div>
         <div className='flex justify-center items-center mt-10'>
-          <button className='h-[50px] w-[200px] bg-orange-400 font-semibold text-xl cursor-pointer rounded-full'>
+          <button className='h-[50px] w-[200px] bg-orange-400 font-semibold text-xl cursor-pointer rounded-full hove:bg-orange-500'>
             Free Tips
           </button>
         </div>

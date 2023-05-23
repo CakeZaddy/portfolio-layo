@@ -95,7 +95,7 @@ const Slider = () => {
           <div className='w-full shadow-xl flex flex-col justify-center items-center rounded-lg hover:scale-105 duration-300 bg-slate-400'>
             <img
               className='w-full md:h-full'
-              src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684251270/layo/blog3_ljdbfc.jpg'
+              src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684251270/layo/blog4_mom3sl.jpg'
               alt='/'
             />
             <div className='text-center mt-4 mx-auto'>
@@ -131,7 +131,7 @@ const Slider = () => {
           <div className='w-full shadow-xl flex flex-col justify-center items-center rounded-lg hover:scale-105 duration-300 bg-slate-400'>
             <img
               className='w-full md:h-full'
-              src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684251270/layo/blog4_mom3sl.jpg'
+              src='  https://res.cloudinary.com/dwgberjxq/image/upload/v1684251270/layo/blog3_ljdbfc.jpg'
               alt='/'
             />
             <div className='text-center mt-4 mx-auto'>
