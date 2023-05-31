@@ -129,11 +129,13 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className='w-full shadow-xl flex flex-col justify-center items-center rounded-lg hover:scale-105 duration-300 bg-slate-400'>
-            <img
-              className='w-full md:h-full'
-              src='  https://res.cloudinary.com/dwgberjxq/image/upload/v1684251270/layo/blog3_ljdbfc.jpg'
-              alt='/'
-            />
+            <div>
+              <img
+                className='w-full md:h-full object-contain'
+                src='  https://res.cloudinary.com/dwgberjxq/image/upload/v1684251270/layo/blog3_ljdbfc.jpg'
+                alt='/'
+              />
+            </div>
             <div className='text-center mt-4 mx-auto'>
               <p className='mt-2 px-11'>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro

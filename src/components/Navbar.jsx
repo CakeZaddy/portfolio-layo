@@ -20,11 +20,11 @@ const Navbar = () => {
 
   return (
     <div className='fixed flex font-eczar justify-between w-full items-center h-24 mx-auto z-[100] bg-gray-300 lg:px-[50px] xl:px-[100px] border-black border-b'>
-      <Link to='/'>
-        <h1 className='w-full text-3xl md:text-4xl font-semibold font-chivo text-center lg:text-left'>
-          Ebunoluwa Oguntimehin
-        </h1>
-      </Link>
+      {/* <Link to='/' className='pl-10'> */}
+      <h1 className='w-full text-3xl md:text-4xl font-semibold font-chivo text-center lg:text-left'>
+        Ebunoluwa Oguntimehin
+      </h1>
+      {/* </Link> */}
       <div className='lg:flex justify-center items-center gap-8 hidden'>
         <ul className='flex justify-center gap-3 xl:gap-5 items-center hover:text-gray-500 font-medium text-lg'>
           <NavLink to='/'>

@@ -8,7 +8,7 @@ import Blogs from '../components/Blogs'
 
 const Home = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Hero />
       <About />
       <Serve />

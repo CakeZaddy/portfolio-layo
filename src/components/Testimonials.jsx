@@ -1,23 +1,41 @@
 import React from 'react'
 import Slider from './Slider'
+import { motion } from 'framer-motion'
+
+import { textVariant, zoomIn } from '../utils/motion'
 
 const Testimonials = () => {
   return (
-    <div className=''>
+    <motion.div initial='initial' animate='animate' className=''>
       <div className='py-10 px-5'>
-        <h2 className='text-3xl font-eczar text-center md:font-medium md:text-4xl'>
+        <motion.h2
+          variants={textVariant()}
+          initial='initial'
+          whileInView='animate'
+          className='text-3xl font-eczar text-center md:font-medium md:text-4xl'
+        >
           Client Testimonials
-        </h2>
+        </motion.h2>
       </div>
-      <div className='mx-5 2xl:mx-[100px] mt-10'>
+      <motion.div
+        variants={zoomIn(0.1, 1)}
+        initial='initial'
+        whileInView='animate'
+        className='mx-5 2xl:mx-[100px] mt-10 h-full'
+      >
         <Slider />
-      </div>
+      </motion.div>
       <div className='flex justify-center items-center'>
-        <button className='h-[50px] w-[220px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
+        <motion.button
+          variants={zoomIn(0.5, 1)}
+          initial='initial'
+          whileInView='animate'
+          className='h-[50px] w-[220px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'
+        >
           Full Testimonials
-        </button>
+        </motion.button>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
