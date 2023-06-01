@@ -4,7 +4,13 @@ import { FaLinkedinIn } from 'react-icons/fa'
 import emailjs from '@emailjs/browser'
 import { motion } from 'framer-motion'
 
-import { fadeIn, slideIn, textVariant, zoomIn } from '../utils/motion'
+import {
+  fadeIn,
+  pageVariant,
+  slideIn,
+  textVariant,
+  zoomIn,
+} from '../utils/motion'
 
 import laptop from '../assets/laptoppm.jpg'
 
@@ -67,8 +73,10 @@ const Contact = () => {
 
   return (
     <motion.div
+      variants={pageVariant()}
       initial='initial'
       animate='animate'
+      exit='exit'
       className='font-neuton overflow-hidden'
     >
       <div className='bg-[#3b7777] green h-24'></div>

@@ -4,23 +4,74 @@ import { motion } from 'framer-motion'
 
 import {
   fadeIn,
+  pageVariant,
   slideIn,
   staggerContainer,
   textVariant,
   zoomIn,
 } from '../utils/motion'
 
+import { services } from '../constants'
 import laptop from '../assets/service-laptop.jpg'
 import Testimonials from '../components/Testimonials'
 // import yourself from '../assets/do-it-yourself.jpg'
 
+const Service = ({ id, title, service, info, image }) => (
+  <div className='py-5 lg:grid grid-cols-2 md:px-[150px] xl:px-[250px]  gap-7'>
+    <motion.img
+      variants={slideIn('left', 'tween', 0.2, 1)}
+      initial='initial'
+      whileInView='animate'
+      className='w-full'
+      src={image}
+      alt={`pic-of-${title}`}
+    />
+    <div className=''>
+      <motion.h2
+        variants={zoomIn(0.2, 0.75)}
+        initial='initial'
+        whileInView='animate'
+        className='font-bold text-lg md:text-xl lg:text-2xl py-5'
+      >
+        {title}
+      </motion.h2>
+      <motion.h2
+        variants={fadeIn('', '', 0.3, 1)}
+        initial='initial'
+        whileInView='animate'
+        className='font-bold pb-5 md:text-lg lg:text-xl'
+      >
+        {id}. {service}
+      </motion.h2>
+      <motion.p
+        variants={fadeIn('', '', 0.3, 1)}
+        initial='initial'
+        whileInView='animate'
+        className='text-lg pb-5 lg:text-xl'
+      >
+        {info}
+      </motion.p>
+      <Link to='/contact'>
+        <motion.button
+          variants={zoomIn(0.5, 1)}
+          initial='initial'
+          whileInView='animate'
+          className='py-2 w-[350px] bg-orange-400 font-semibold text-xl cursor-pointer rounded-full hover:bg-orange-500'
+        >
+          Know More
+        </motion.button>
+      </Link>
+    </div>
+  </div>
+)
+
 const Services = () => {
   return (
     <motion.div
-      // variants={staggerContainer()}
+      variants={pageVariant()}
       initial='initial'
       animate='animate'
-      // viewport={{ once: true, amount: 0.25 }}
+      exit='exit'
       className='font-neuton overflow-hidden'
     >
       <div className='bg-[#3b7777] green h-24'></div>
@@ -76,203 +127,9 @@ const Services = () => {
         >
           Here Are Some Of My Services
         </motion.h2>
-        <div className='py-5 lg:grid grid-cols-2 md:px-[150px] xl:px-[250px]  gap-7'>
-          <motion.img
-            variants={slideIn('left', 'tween', 0.2, 1)}
-            initial='initial'
-            whileInView='animate'
-            className='w-full'
-            src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684227376/layo/brainstorm_kwpdbp.jpg'
-            alt=''
-          />
-          <div className=''>
-            <motion.h2
-              variants={zoomIn(0.2, 0.75)}
-              initial='initial'
-              whileInView='animate'
-              className='font-bold text-lg md:text-xl lg:text-2xl py-5'
-            >
-              DO IT YOURSELF
-            </motion.h2>
-            <motion.h2
-              variants={fadeIn('', '', 0.3, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='font-bold pb-5 md:text-lg lg:text-xl'
-            >
-              1. Social Media Strategy Brainstorm
-            </motion.h2>
-            <motion.p
-              variants={fadeIn('', '', 0.3, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='text-lg pb-5 lg:text-xl'
-            >
-              If you’re planning on creating a social media strategy for your
-              business, but don’t know where to start, or need some initial
-              direction, discover my brand NEW 90-minute Social Media Strategy
-              Brainstorm session.
-            </motion.p>
-            <Link to='/contact'>
-              <motion.button
-                variants={zoomIn(0.5, 1)}
-                initial='initial'
-                whileInView='animate'
-                className='py-2 w-[350px] bg-orange-400 font-semibold text-xl cursor-pointer rounded-full hover:bg-orange-500'
-              >
-                Know More
-              </motion.button>
-            </Link>
-          </div>
-        </div>
-        <div className='py-5 lg:grid grid-cols-2 md:px-[150px] xl:px-[250px]  gap-7'>
-          <motion.img
-            variants={slideIn('left', 'tween', 0.2, 1)}
-            initial='initial'
-            whileInView='animate'
-            className='w-full'
-            src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684227376/layo/support_eslik0.jpg'
-            alt=''
-          />
-          <div className=''>
-            <motion.h2
-              variants={zoomIn(0.2, 0.75)}
-              initial='initial'
-              whileInView='animate'
-              className='font-bold text-lg md:text-xl lg:text-2xl py-5'
-            >
-              DONE WITH YOU
-            </motion.h2>
-            <motion.h2
-              variants={fadeIn('', '', 0.3, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='font-bold pb-5 md:text-lg lg:text-xl'
-            >
-              2. One-To-One Social Media Strategy Support Via Voxer
-            </motion.h2>
-            <motion.p
-              variants={fadeIn('', '', 0.3, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='text-lg lg:text-xl pb-5'
-            >
-              As you create your social media strategy, know that you have
-              expert support available at the click of a button. I’m ready to
-              answer your questions, share tips, provide recommendations and
-              more.
-            </motion.p>
-            <Link to='/contact'>
-              <motion.button
-                variants={zoomIn(0.5, 1)}
-                initial='initial'
-                whileInView='animate'
-                className='py-2 w-[350px] bg-orange-400 font-semibold text-xl cursor-pointer rounded-full hover:bg-orange-500'
-              >
-                Know More
-              </motion.button>
-            </Link>
-          </div>
-        </div>
-        <div className='py-5 lg:grid grid-cols-2 md:px-[150px] xl:px-[250px]  gap-7'>
-          <motion.img
-            variants={slideIn('left', 'tween', 0.2, 1)}
-            initial='initial'
-            whileInView='animate'
-            className='w-full'
-            src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684227376/layo/bespoke_jmwjie.jpg'
-            alt=''
-          />
-          <div className=''>
-            <motion.h2
-              variants={zoomIn(0.2, 0.75)}
-              initial='initial'
-              whileInView='animate'
-              className='font-bold text-lg md:text-xl lg:text-2xl py-5'
-            >
-              DONE FOR YOU
-            </motion.h2>
-            <motion.h2
-              variants={fadeIn('', '', 0.3, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='font-bold pb-5 md:text-lg lg:text-xl'
-            >
-              3. Bespoke Social Media Strategy
-            </motion.h2>
-            <motion.p
-              variants={fadeIn('', '', 0.3, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='text-lg lg:text-xl pb-5'
-            >
-              Having a clear strategy ensures you get more from your activities,
-              and you don’t waste time and money on areas that add little or no
-              value. Let me help you create an effective strategy for your
-              business.
-            </motion.p>
-            <Link to='/contact'>
-              <motion.button
-                variants={zoomIn(0.5, 1)}
-                initial='initial'
-                whileInView='animate'
-                className='py-2 w-[350px] bg-orange-400 font-semibold text-xl cursor-pointer rounded-full hover:bg-orange-500'
-              >
-                Know More
-              </motion.button>
-            </Link>
-          </div>
-        </div>
-        <div className='py-5 lg:grid grid-cols-2 md:px-[150px] xl:px-[250px]  gap-7'>
-          <motion.img
-            variants={slideIn('left', 'tween', 0.2, 1)}
-            initial='initial'
-            whileInView='animate'
-            className='w-full'
-            src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684227376/layo/1-1_x7idps.jpg'
-            alt=''
-          />
-          <div className=''>
-            <motion.h2
-              variants={zoomIn(0.2, 0.75)}
-              initial='initial'
-              whileInView='animate'
-              className='font-bold text-lg md:text-xl lg:text-2xl py-5'
-            >
-              ONGOING SUPPORT
-            </motion.h2>
-            <motion.h2
-              variants={fadeIn('', '', 0.3, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='font-bold pb-5 md:text-lg lg:text-xl'
-            >
-              4. One-To-One Virtual Consultancy
-            </motion.h2>
-            <motion.p
-              variants={fadeIn('', '', 0.3, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='text-lg lg:text-xl pb-5'
-            >
-              Once you have a social media strategy, I want to continue
-              supporting you on your journey. We can talk through your
-              challenges, ensure your strategy is being implemented effectively
-              and plan ahead so your social media continues to benefit your
-              business.
-            </motion.p>
-            <Link to='/contact'>
-              <motion.button
-                variants={zoomIn(0.5, 1)}
-                initial='initial'
-                whileInView='animate'
-                className='py-2 w-[350px] bg-orange-400 font-semibold text-xl cursor-pointer rounded-full hover:bg-orange-500'
-              >
-                Know More
-              </motion.button>
-            </Link>
-          </div>
-        </div>
+        {services.map((service, index) => (
+          <Service key={service.service} index={index} {...service} />
+        ))}
       </div>
       <div className='bg-[#3b7777] flex green py-10 flex-col justify-center items-center '>
         <motion.p

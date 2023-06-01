@@ -6,16 +6,25 @@ import Testimonials from '../components/Testimonials'
 import Quote from '../components/Quote'
 import Blogs from '../components/Blogs'
 
+import { motion } from 'framer-motion'
+import { pageVariant } from '../utils/motion'
+
 const Home = () => {
   return (
-    <div className='overflow-hidden'>
+    <motion.div
+      variants={pageVariant()}
+      initial='initial'
+      animate='animate'
+      exit='exit'
+      className='overflow-hidden'
+    >
       <Hero />
       <About />
       <Serve />
       <Testimonials />
       <Quote />
       <Blogs />
-    </div>
+    </motion.div>
   )
 }
 

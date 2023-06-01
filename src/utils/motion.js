@@ -1,3 +1,5 @@
+import { easeInOut } from 'framer-motion'
+
 export const textVariant = (delay) => {
   return {
     initial: {
@@ -62,7 +64,6 @@ export const slideIn = (direction, type, delay, duration) => {
       x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
       y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
     },
-    // whileInView: { animate },
     animate: {
       x: 0,
       y: 0,
@@ -77,6 +78,20 @@ export const slideIn = (direction, type, delay, duration) => {
   }
 }
 
+export const pageVariant = () => {
+  return {
+    initial: { width: '50%' },
+    animate: {
+      width: '100%',
+      transition: { duration: 0.25, ease: 'easeInOut' },
+    },
+    exit: {
+      x: window.innerWidth,
+      transition: { duration: 0.2, ease: 'easeInOut' },
+    },
+  }
+}
+
 export const staggerContainer = (staggerChildren, delayChildren) => {
   return {
     initial: {},
@@ -85,16 +100,6 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
         staggerChildren: staggerChildren,
         delayChildren: delayChildren || 0,
       },
-    },
-  }
-}
-
-export const tiltVariant = () => {
-  return {
-    hover: {
-      rotateX: 10,
-      rotateY: 10,
-      perspective: '500px',
     },
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import { fadeIn, slideIn, textVariant } from '../utils/motion'
+import { fadeIn, pageVariant, slideIn, textVariant } from '../utils/motion'
 
 import work from '../assets/workwith.jpg'
 import Testimonials from '../components/Testimonials'
@@ -23,8 +23,10 @@ const About = () => {
   return (
     <motion.div
       className='pb-5 overflow-hidden'
+      variants={pageVariant()}
       initial='initial'
       animate='animate'
+      exit='exit'
     >
       <div className='bg-[#3b7777] green h-24'></div>
       <motion.div

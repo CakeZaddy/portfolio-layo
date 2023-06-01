@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import {
+  // Route,
+  BrowserRouter as Router,
+  // Routes,
+  // useLocation,
+} from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import NotFound from './components/NotFound'
-import Home from './pages/Home'
-import About from './pages/About'
-import Services from './pages/Services'
-import Blog from './pages/Blog'
-import Contact from './pages/Contact'
+import AnimatedRoutes from './components/AnimatedRoutes'
 
 import { MdLightMode, MdDarkMode } from 'react-icons/md'
 
@@ -29,14 +29,7 @@ function App() {
       </div>
       <Router>
         <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/services' element={<Services />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/blog' element={<NotFound />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
+        <AnimatedRoutes />
         <Footer />
       </Router>
     </div>

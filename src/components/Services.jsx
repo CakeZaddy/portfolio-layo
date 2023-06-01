@@ -3,8 +3,67 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Tilt } from 'react-tilt'
 
-import { slideIn, tiltOptions } from '../utils/motion'
+import { services } from '../constants'
+
+import { fadeIn, tiltOptions } from '../utils/motion'
 import { textVariant } from '../utils/motion'
+
+const ServiceCard = ({ id, image, service, info, index }) => (
+  // <Tilt options={tiltOptions()}>
+  //   <motion.div
+  //     variants={slideIn('right', 'tween', 0.2, 1)}
+  //     initial='initial'
+  //     whileInView='animate'
+  //     className='w-full h-full shadow-xl flex flex-col justify-center items-center rounded-lg  duration-300 bg-slate-300'
+  //   >
+  //     <div className='w-full h-[250px]'>
+  //       <img
+  //         className='w-full object-cover'
+  //         src={image}
+  //         alt={`image-of-${service}`}
+  //       />
+  //     </div>
+  //     <div className='text-center mt-4 mx-auto bg-slate-300'>
+  //       <h4 className='font-semibold font-eczar'>
+  //         {id}. {service}
+  //       </h4>
+  //       <p className='mt-2 px-11'>{info}</p>
+  //     </div>
+  //     <Link to='/services'>
+  //       <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
+  //         Discover More
+  //       </button>
+  //     </Link>
+  //   </motion.div>
+  // </Tilt>
+  <Tilt options={tiltOptions()}>
+    <motion.div
+      variants={fadeIn('right', 'spring', index * 0.5, 0.65)}
+      initial='initial'
+      whileInView='animate'
+      className='w-full h-full shadow-xl flex flex-col justify-center items-center rounded-lg  duration-300 bg-slate-300'
+    >
+      <div className='w-full h-full'>
+        <img
+          className='w-full h-full'
+          src={image}
+          alt={`image-of-${service}`}
+        />
+      </div>
+      <div className='text-center mt-4 mx-auto'>
+        <h4 className='font-semibold font-eczar'>
+          {id}. {service}
+        </h4>
+        <p className='mt-2 px-11'>{info}</p>
+      </div>
+      <Link to='/services'>
+        <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer rounded-full my-8 font-eczar'>
+          Discover More
+        </button>
+      </Link>
+    </motion.div>
+  </Tilt>
+)
 
 const Services = () => {
   return (
@@ -23,7 +82,7 @@ const Services = () => {
           How Can I Help You With Your Social Media Strategy?
         </motion.h2>
         <div className='my-10 mx-auto grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
-          <Tilt options={tiltOptions()}>
+          {/* <Tilt options={tiltOptions()}>
             <motion.div
               variants={slideIn('left', 'tween', 0.2, 1)}
               initial='initial'
@@ -54,104 +113,10 @@ const Services = () => {
                 </button>
               </Link>
             </motion.div>
-          </Tilt>
-          <Tilt options={tiltOptions()}>
-            <motion.div
-              variants={slideIn('left', 'tween', 0.2, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='w-full h-full shadow-xl flex flex-col justify-center items-center rounded-lg hover:scale-105 duration-300 bg-slate-300'
-            >
-              <div className='w-full h-full'>
-                <img
-                  className='w-full h-full object-cover'
-                  src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684227376/layo/support_eslik0.jpg'
-                  alt='/'
-                />
-              </div>
-              <div className='text-center mt-4 mx-auto'>
-                <h4 className='font-semibold font-eczar'>
-                  2. One-To-One Social Media Strategy Support
-                </h4>
-                <p className='mt-2 px-11'>
-                  As you create your social media strategy, know that you have
-                  expert support available at the click of a button. I’m ready
-                  to answer your questions, share tips, provide recommendations
-                  and more.
-                </p>
-              </div>
-              <Link to='/services'>
-                <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
-                  Discover More
-                </button>
-              </Link>
-            </motion.div>
-          </Tilt>
-          <Tilt options={tiltOptions()}>
-            <motion.div
-              variants={slideIn('right', 'tween', 0.2, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='w-full h-full shadow-xl flex flex-col justify-center items-center rounded-lg  duration-300 bg-slate-300'
-            >
-              <div className='w-full h-full'>
-                <img
-                  className='object-cover w-full'
-                  src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684227376/layo/bespoke_jmwjie.jpg'
-                  alt='/'
-                />
-              </div>
-              <div className='text-center mt-4 mx-auto'>
-                <h4 className='font-semibold font-eczar'>
-                  3. Bespoke Social Media Strategy
-                </h4>
-                <p className='mt-2 px-11'>
-                  Having a clear strategy ensures you get more from your
-                  activities, and you don’t waste time and money on areas that
-                  add little or no value. Let me help you create an effective
-                  strategy for your business
-                </p>
-              </div>
-              <Link to='/services'>
-                <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
-                  Discover More
-                </button>
-              </Link>
-            </motion.div>
-          </Tilt>
-          <Tilt options={tiltOptions()}>
-            <motion.div
-              variants={slideIn('right', 'tween', 0.2, 1)}
-              initial='initial'
-              whileInView='animate'
-              className='w-full h-full shadow-xl flex flex-col justify-center items-center rounded-lg  duration-300 bg-slate-300'
-            >
-              <div className='w-full h-[250px]'>
-                <img
-                  className='w-full object-cover'
-                  src='https://res.cloudinary.com/dwgberjxq/image/upload/v1684227376/layo/1-1_x7idps.jpg'
-                  alt='/'
-                />
-              </div>
-              <div className='text-center mt-4 mx-auto bg-slate-300'>
-                <h4 className='font-semibold font-eczar'>
-                  4. One-To-One Virtual Consultancy
-                </h4>
-                <p className='mt-2 px-11'>
-                  Once you have a social media strategy, I want to continue
-                  supporting you on your journey. We can talk through your
-                  challenges, ensure your strategy is being implemented
-                  effectively and plan ahead so your social media continues to
-                  benefit your business
-                </p>
-              </div>
-              <Link to='/services'>
-                <button className='h-[40px] w-[180px] bg-orange-400 hover:bg-orange-500 font-medium text-lg cursor-pointer font-eczar rounded-full my-8'>
-                  Discover More
-                </button>
-              </Link>
-            </motion.div>
-          </Tilt>
+          </Tilt> */}
+          {services.map((service, index, id) => (
+            <ServiceCard key={service.id} index={index} {...service} />
+          ))}
         </div>
       </div>
     </motion.div>
