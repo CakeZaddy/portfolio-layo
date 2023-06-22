@@ -104,11 +104,12 @@ const Navbar = () => {
         <h1 className='text-center mt-10 text-3xl md:text-4xl font-chivo font-semibold'>
           Ebunoluwa Oguntimehin
         </h1>
-        <ul className='text-center px-[120px] text-gray-500 font-semibold text-5xl pt-10'>
+        <ul className='text-center  text-gray-500 font-semibold text-5xl pt-10'>
           <Link onClick={handleNav} to='/'>
             <li
               className={`p-4 hover:text-black con cursor-pointer ${
-                pathMatch('/') && 'text-gray-400 border-b-4 border-red-500'
+                pathMatch('/') &&
+                'text-gray-400 border-b-4 inline-block border-red-500'
               }`}
             >
               Home
@@ -117,7 +118,8 @@ const Navbar = () => {
           <Link onClick={handleNav} to='/about'>
             <li
               className={`p-4 hover:text-black con cursor-pointer ${
-                pathMatch('/about') && 'text-gray-400 border-b-4 border-red-500'
+                pathMatch('/about') &&
+                'text-gray-400 border-b-4 inline-block border-red-500'
               }`}
             >
               About
@@ -127,7 +129,7 @@ const Navbar = () => {
             <li
               className={`p-4 hover:text-black con cursor-pointer ${
                 pathMatch('/services') &&
-                'text-gray-400 border-b-4 border-red-500'
+                'text-gray-400 border-b-4 inline-block border-red-500'
               }`}
             >
               Services
@@ -136,7 +138,8 @@ const Navbar = () => {
           <Link onClick={handleNav} to='/blog'>
             <li
               className={`p-4 hover:text-black con cursor-pointer ${
-                pathMatch('/blog') && 'text-gray-400 border-b-4 border-red-500'
+                pathMatch('/blog') &&
+                'text-gray-400 inline-block border-b-4 border-red-500'
               }`}
             >
               Blog
@@ -146,7 +149,7 @@ const Navbar = () => {
             <li
               className={`p-4 hover:text-black con cursor-pointer ${
                 pathMatch('/contact') &&
-                'text-gray-400 border-b-4 border-red-500'
+                'text-gray-700 border-b-4 inline-block border-red-500'
               }`}
             >
               Contact
